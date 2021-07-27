@@ -1,0 +1,241 @@
+:root{
+    /* colors */
+    /* Primary */
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Neutral */
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* FONT */
+
+    --barlow: 'Barlow Semi Condensed', sans-serif;
+
+
+}
+html{
+    top: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--barlow);
+    font-size: 13px;
+    height: 100%;
+    max-width: 100%;
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 80px 20px;
+}
+
+.card1 img{
+    border: 2px solid rgb(214, 168, 214, .4);
+    border-radius: 100%;
+    
+}
+
+.card2 img{
+    border: 2px solid rgba(219, 212, 219);
+    border-radius: 100%;
+    
+}
+
+.card3 img{
+    border: 2px solid rgb(92, 86, 92, .5);
+    border-radius: 100%;
+    
+}
+
+.card4 img{
+    border: 2px solid var(--Moderate-violet);
+    border-radius: 100%;
+    
+}
+
+
+.card5 img{
+    border: 2px solid rgb(92, 86, 92, .5);
+    border-radius: 100%;
+    
+}
+
+
+
+main{
+   display: grid;
+   grid-template-columns: auto;
+   justify-content: center;
+   align-items: center;
+   column-gap: 0rem;
+   row-gap: 1rem;
+   grid-template-areas: 
+   "card1"
+   "card2"
+   "card3"
+   "card4"
+   "card5"; 
+}
+
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.name{
+    font-size: 0.8rem;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.graduate{
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.testimonial{
+    opacity: 0.7;
+}
+
+
+
+.p-description{
+    margin-left: 1em;
+}
+
+.card{
+    height: 100%;
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 2em;
+    box-shadow: 0px 20px 25px -5px rgba(63, 26, 26, 0.1),
+     rgba(0, 0, 0, 0.004) 0px 10px 10px -5px;
+}
+
+
+.card1{
+    grid-area: card1;
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-position-x: 90%;
+    background-repeat: no-repeat;
+    position: top 2em right  5em ;
+    color: var(--White);
+      
+}
+
+.card2{
+    grid-area: card2;
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--White);
+}
+
+.card3{
+    grid-area: card3;
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card4{
+    grid-area: card4;
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--White);
+}
+
+.card5{
+    grid-area: card5;
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+
+
+
+
+@media screen and (min-width:700px){
+
+    body{
+        margin-top: 25px
+    }
+
+    main{
+        max-width: 700px;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content max-content max-content;
+        grid-gap:1em;
+        grid-template-areas: 
+        "card1 card1"
+        "card2 card3"
+        "card4 card4"
+        "card5 card5";
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
+    body{
+        margin-top: 25px;
+    }
+
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-template-areas: 
+        "card1 card1 card3"
+        "card2 card4 card4"
+        "card5 card5 card5";
+    }
+
+}
+
+
+@media  screen and (min-width:1200px) {
+
+    body{
+        margin-top: 25px;
+        height: auto;
+        width: 100%;
+    }
+
+    main{
+        width: 100%;
+        max-width: 1200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+        grid-template-areas: 
+        "card1 card1 card2 card5"
+        "card3 card4 card4 card5";
+
+    }
+
+} 
